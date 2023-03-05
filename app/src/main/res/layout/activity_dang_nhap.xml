@@ -9,76 +9,77 @@
     tools:context=".customer.Login.DangNhapActivity">
 
     <ImageView
-        android:gravity="center_horizontal"
         android:id="@+id/imageLogo"
         android:layout_width="wrap_content"
         android:layout_height="140dp"
         android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         app:srcCompat="@drawable/logo" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtUserName"
-        android:layout_below="@+id/tvImage"
-        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvImage"
+        android:layout_marginTop="25dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userdangnhap"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            app:errorEnabled="true"
-            android:id="@+id/userdangnhap"
+            android:hint="Tên đăng nhập..."
             app:boxBackgroundMode="outline"
-            android:hint="Tên đăng nhập..." />
+            app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtPassWord"
-        android:layout_below="@+id/edtUserName"
-        app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtUserName"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passworddangnhap"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:id="@+id/passworddangnhap"
-            android:inputType="textPassword"
-            android:hint="Mật khẩu..." />
+            android:hint="Mật khẩu..."
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_marginTop="4dp"
-        android:layout_below="@+id/edtPassWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPassWord"
+        android:layout_marginTop="4dp"
         android:text="Lưu đăng nhập? " />
 
 
     <LinearLayout
         android:id="@+id/linear"
-        android:layout_below="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox"
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnDangNhap"
             android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:background="@drawable/botron_button"
-            android:textStyle="bold"
-            android:textSize="14dp"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:textColor="@color/white"
+            android:background="@drawable/botron_button"
             android:backgroundTint="@color/black"
-            android:text="ĐĂNG NHẬP" />
+            android:text="ĐĂNG NHẬP"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnDangKy"
@@ -86,10 +87,10 @@
             android:layout_height="33dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_weight="1"
             android:background="@drawable/botron_button"
             android:backgroundTint="#E4C76E"
             android:text="ĐĂNG KÝ"
-            android:layout_weight="1"
             android:textColor="@color/black"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -98,13 +99,13 @@
 
     <TextView
         android:id="@+id/tvQuenMatKhau"
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="12dp"
+        android:text="Quên mật khẩu?Click vào đây"
         android:textColor="#164ACF"
-        android:textStyle="bold"
-        android:text="Quên mật khẩu?Click vào đây" />
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -115,10 +116,10 @@
             android:id="@+id/view"
             android:layout_width="150dp"
             android:layout_height="1dp"
-            android:layout_marginRight="17dp"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_marginRight="17dp"
             android:layout_toLeftOf="@id/tvHoac"
+            android:layout_weight="1"
             android:background="@color/colorGrey" />
 
         <TextView
@@ -126,9 +127,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="Hoặc"
             android:textColor="#0C0C0C"
-            android:textStyle="bold"
-            android:text="Hoặc" />
+            android:textStyle="bold" />
 
         <View
             android:id="@+id/view1"
@@ -136,23 +137,23 @@
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:layout_marginLeft="17dp"
-            android:layout_weight="1"
             android:layout_toRightOf="@id/tvHoac"
+            android:layout_weight="1"
             android:background="@color/colorGrey" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btnGmail"
-        android:layout_below="@+id/tvHoac"
         android:layout_width="match_parent"
-        android:textColor="@color/black"
-        android:layout_marginTop="18dp"
-        android:textStyle="bold"
-        android:drawableRight="@drawable/ic_gmail"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHoac"
+        android:layout_marginTop="18dp"
         android:backgroundTint="@color/white"
-        android:text="Đăng nhập bằng Gmail" />
-
+        android:drawableRight="@drawable/ic_gmail"
+        android:text="Đăng nhập bằng Gmail"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
